@@ -3,77 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>파란색 그라데이션 테마 페이지</title>
+    <title>커뮤니티 사이트</title>
     <style>
-        /* 전체 페이지 배경에 그라데이션 적용 */
         body {
-            background: linear-gradient(135deg, #00bcd4, #0277bd); /* 파란색 그라데이션 배경 */
-            color: white; /* 텍스트 색상 */
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #00bcd4, #0277bd);
+            font-family: Arial, sans-serif;
+            color: white;
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(45deg, #0288d1, #00acc1);
+            padding: 20px;
+            width: 100%;
             text-align: center;
         }
 
-        /* 헤더 스타일: 그라데이션 배경 */
-        header {
-            background: linear-gradient(45deg, #0288d1, #00acc1); /* 파란색 그라데이션 */
-            color: white;
-            padding: 20px;
+        .container {
             width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            margin-top: 20px;
         }
 
-        /* 콘텐츠 스타일 */
-        .content {
-            background: rgba(0, 0, 0, 0.3); /* 반투명 배경 */
-            border-radius: 10px;
-            padding: 40px;
-            max-width: 600px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* 버튼 스타일: 그라데이션 배경 */
-        button {
-            background: linear-gradient(45deg, #039be5, #0288d1); /* 파란색 그라데이션 버튼 */
+        .button {
+            background-color: #039be5;
             color: white;
+            padding: 10px 20px;
+            margin: 10px;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
-            transition: background 0.3s ease;
+            transition: background-color 0.3s;
         }
 
-        /* 버튼 hover 스타일 */
-        button:hover {
-            background: linear-gradient(45deg, #0288d1, #039be5);
+        .button:hover {
+            background-color: #0288d1;
         }
 
-        /* 링크 스타일 */
-        a {
-            color: #80deea; /* 연한 파란색 링크 */
-            text-decoration: none;
-            font-weight: bold;
+        .content {
+            display: flex;
+            justify-content: space-between;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .section {
+            width: 22%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section h3 {
+            margin-top: 0;
+        }
+
+        .badge {
+            background-color: #f50057;
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .user-list li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>파란색 그라데이션 테마</h1>
+        <h1>커뮤니티 사이트</h1>
+        <div>
+            <button class="button">게시물 업로드</button>
+            <button class="button">설정</button>
+        </div>
     </header>
 
-    <div class="content">
-        <p>그라데이션이 적용된 파란색 테마 페이지입니다!</p>
-        <button onclick="alert('버튼 클릭됨!')">클릭하세요</button>
-        <p>더 많은 정보를 원하시면 <a href="https://github.com" target="_blank">GitHub</a>를 방문해보세요.</p>
+    <div class="container">
+        <div class="content">
+            <!-- 레벨 높은 유저 TOP 10 -->
+            <div class="section">
+                <h3>레벨 높은 유저 TOP 10</h3>
+                <ul class="user-list">
+                    <li>1. 유저1 - 레벨 10</li>
+                    <li>2. 유저2 - 레벨 9</li>
+                    <li>3. 유저3 - 레벨 8</li>
+                    <!-- 추가된 유저들 -->
+                </ul>
+            </div>
+
+            <!-- 최신 글 -->
+            <div class="section">
+                <h3>최신 글</h3>
+                <ul>
+                    <li>글 1</li>
+                    <li>글 2</li>
+                    <li>글 3</li>
+                    <!-- 최신 글 목록 -->
+                </ul>
+            </div>
+
+            <!-- 인기글 -->
+            <div class="section">
+                <h3>인기 글</h3>
+                <ul>
+                    <li>글 A</li>
+                    <li>글 B</li>
+                    <li>글 C</li>
+                    <!-- 인기 글 목록 -->
+                </ul>
+            </div>
+
+            <!-- 팔로우/팔로워 순위 -->
+            <div class="section">
+                <h3>팔로우/팔로워 순위</h3>
+                <ul class="user-list">
+                    <li>1. 유저1 - 팔로워 1000</li>
+                    <li>2. 유저2 - 팔로워 900</li>
+                    <!-- 추가된 유저들 -->
+                </ul>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
